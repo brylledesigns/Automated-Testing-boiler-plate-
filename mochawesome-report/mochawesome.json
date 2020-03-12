@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2018-10-25T06:02:26.632Z",
-    "end": "2018-10-25T06:03:16.468Z",
-    "duration": 49836,
+    "start": "2020-03-12T07:41:17.663Z",
+    "end": "2020-03-12T07:41:39.545Z",
+    "duration": 21882,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -19,7 +19,7 @@
     "pendingPercentClass": "danger"
   },
   "suites": {
-    "uuid": "b5f45a11-8a65-4d7b-ac3e-24ab34a16dab",
+    "uuid": "58cf55ca-fb9a-4d98-a67a-eb571f5493ce",
     "title": "",
     "fullFile": "",
     "file": "",
@@ -28,14 +28,14 @@
         "title": "\"before all\" hook",
         "fullTitle": "\"before all\" hook",
         "timedOut": false,
-        "duration": 21225,
+        "duration": 889,
         "pass": false,
         "fail": false,
         "pending": false,
         "code": "global.expect = expect;\nglobal.browser = await puppeteer.launch(opts);",
         "err": {},
         "isRoot": true,
-        "uuid": "12e7a8be-39cc-49bc-9eed-4b1d4f4aaa01",
+        "uuid": "0a7199df-09d4-461c-ab25-511631823820",
         "isHook": true,
         "skipped": false
       }
@@ -45,14 +45,14 @@
         "title": "\"after all\" hook",
         "fullTitle": "\"after all\" hook",
         "timedOut": false,
-        "duration": 132,
+        "duration": 150,
         "pass": false,
         "fail": false,
         "pending": false,
         "code": "browser.close();\nsetTimeout( () => { cmd.run('node server.js');}, 5000)\nsetTimeout(() => {opn('http://localhost:9988');}, 2000);\n // open('./mochawesome-report/mochawesome.html');\nglobal.browser = globalVariables.browser;\nglobal.expect = globalVariables.expect;",
         "err": {},
         "isRoot": true,
-        "uuid": "72964ae9-daee-4fb5-ad00-7c7c32dcf11e",
+        "uuid": "3d3b9170-b7c1-4755-ad4c-6f2eeb0ab33c",
         "isHook": true,
         "skipped": false
       }
@@ -60,23 +60,23 @@
     "tests": [],
     "suites": [
       {
-        "uuid": "1d280203-838f-4fff-ae45-be1c6a67908b",
+        "uuid": "0bc7e8ac-8a2e-450f-938c-7673dd2b19ca",
         "title": "simple test for fv main console",
-        "fullFile": "/Users/tariqulislam/Development/node-playground/puppeteer-mocha-automated-testing/test/sample.spec.js",
-        "file": "/test/sample.spec.js",
+        "fullFile": "Q:\\clarido\\webdev2\\automated-test\\031220\\puppeteer-mocha-automated-testing\\test\\sample.spec.js",
+        "file": "\\test\\sample.spec.js",
         "beforeHooks": [
           {
             "title": "\"before all\" hook",
             "fullTitle": "simple test for fv main console \"before all\" hook",
             "timedOut": false,
-            "duration": 9889,
+            "duration": 6457,
             "pass": false,
             "fail": false,
             "pending": false,
-            "code": "page = await browser.newPage();\nawait page.goto(\"https://www.linkedin.com/\");\nawait page.setViewport( { width: 1920, height: 1040} );",
+            "code": "page = await browser.newPage();\nawait page.goto(\"https://www.linkedin.com/login?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin\");\nawait page.setViewport( { width: 1920, height: 1040} );",
             "err": {},
             "isRoot": false,
-            "uuid": "1cc63f27-30e1-40e1-84be-1553766bd896",
+            "uuid": "3e02bf7c-c572-4ee4-a2d1-37e6131d1b2a",
             "isHook": true,
             "skipped": false
           }
@@ -86,14 +86,14 @@
             "title": "\"after all\" hook",
             "fullTitle": "simple test for fv main console \"after all\" hook",
             "timedOut": false,
-            "duration": 751,
+            "duration": 126,
             "pass": false,
             "fail": false,
             "pending": false,
             "code": "await page.close();",
             "err": {},
             "isRoot": false,
-            "uuid": "29d5e278-8e58-4e83-887f-b39caf355d5f",
+            "uuid": "6fa97ab4-c355-4f29-8dd5-45bdfc7d4c02",
             "isHook": true,
             "skipped": false
           }
@@ -103,28 +103,28 @@
             "title": "should login to home page",
             "fullTitle": "simple test for fv main console should login to home page",
             "timedOut": false,
-            "duration": 17801,
+            "duration": 14250,
             "state": "passed",
             "speed": "slow",
             "pass": true,
             "fail": false,
             "pending": false,
-            "code": "const emailInput = \"#login-email\";\nconst passwordInput = \"#login-password\";\nconst submitSelector = \"#login-submit\";\n \n linkEmail = await page.$(emailInput);\n linkPassword = await page.$(passwordInput);\n linkSubmit = await page.$(submitSelector);\n await linkEmail.click({ clickCount: 3 });\n await linkEmail.type('tariqul.islam.rony@gmail.com'); // add the email address for linkedin //\n await linkPassword.click({ clickCount: 3});\n await linkPassword.type('programmerrony01'); // add password for linkedin account\n await linkSubmit.click();\n await page.waitForNavigation();\n await page.waitFor(3000);",
+            "code": "const emailInput = \"#username\";\nconst passwordInput = \"#password\";\nconst submitSelector = \"#app__container > main > div > form > div.login__form_action_container > button\";\n \n linkEmail = await page.$(emailInput);\n linkPassword = await page.$(passwordInput);\n linkSubmit = await page.$(submitSelector);\n await linkEmail.click({ clickCount: 3 });\n await linkEmail.type('tariqul.islam.rony@gmail.com'); // add the email address for linkedin //\n await linkPassword.click({ clickCount: 3});\n await linkPassword.type('programmerrony01'); // add password for linkedin account\n await linkSubmit.click();\n await page.waitForNavigation();\n await page.waitFor(3000);",
             "err": {},
             "isRoot": false,
-            "uuid": "a78391ba-acb2-4872-8044-6599390c6b3a",
+            "uuid": "36af5dc2-0587-4a0d-855b-c879afdf316f",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
         "passes": [
-          "a78391ba-acb2-4872-8044-6599390c6b3a"
+          "36af5dc2-0587-4a0d-855b-c879afdf316f"
         ],
         "failures": [],
         "pending": [],
         "skipped": [],
-        "duration": 17801,
+        "duration": 14250,
         "root": false,
         "rootEmpty": false,
         "_timeout": 0
@@ -139,5 +139,5 @@
     "rootEmpty": true,
     "_timeout": 0
   },
-  "copyrightYear": 2018
+  "copyrightYear": 2020
 }
